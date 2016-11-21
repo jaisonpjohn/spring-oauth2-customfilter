@@ -1,18 +1,22 @@
 This project shows what you can do with the minimum configuration to
-set up an Authorization Server and Resource Server. 
+set up a Resource Server.
+This resource server is configured to talk to an Authorization server, you can configure the application.yaml file to use a different Auth server if you need.
 
-For the Authorization Server you need to `@EnableAuthorizationServer`
-and also configure at least one client registration
-(`OAuth2ClientDetails`). You can see this is the bulk of
-`Application.java`. 
+## Building
 
-An `AuthenticationManager` is created by Spring Boot (it has a single
-user, named "user", with password "password", per
-`application.yml`). It is needed in the Authorization Server to
-provide authentication for the Resource Owner Password grant type.
+You need Java (1.7 or better) and Maven (3.0.5 or better):
 
-For the Resource Server all that is needed is the
-`@EnableResourceServer` annotation. By default it protects all
-resources that are not explicitly ignored and not exposed by the
-`AuthorizationEndpoint` (if there is an Authorization Server in the
-same application).
+```
+$ mvn package
+$ java -jar target/*.jar
+...
+<app starts and listens on port 8080>
+```
+
+Here are some curl commands to use to get started:
+
+```
+$ TOKEN=b561ff06-4259-466e-92d8-781db1a5190 (whatever token you are getting from the Auth server)
+$ curl -H "Authorization: Bearer $TOKEN" localhost:8090/
+Hello World
+```
