@@ -1,11 +1,9 @@
 This project is a minimal but functional OAuth2 Authorization Server
-(token issuer) and Resource Server (protected API). (You could split
-the two roles across two applications if you preferred.) It uses
+(token issuer) and Resource Server (protected API). It uses
 [Spring Boot](https://github.com/spring-projects/spring-boot) to
 provide an embedded servlet container and for defaulting a load of
 configuration, so you should be up and running with it very
-quickly. There are integration tests proving that it works and also
-showing you how to access it with the Spring `RestTemplate` API.
+quickly.
 
 ## Building
 
@@ -15,7 +13,7 @@ You need Java (1.7 or better) and Maven (3.0.5 or better):
 $ mvn package
 $ java -jar target/*.jar
 ...
-<Auth Server starts and listens on port 8080>
+<Authorization Server starts and listens on port 8080>
 <Resource Server starts and listens on port 8090>
 ```
 
