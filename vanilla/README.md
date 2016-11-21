@@ -10,7 +10,7 @@ You need Java (1.7 or better) and Maven (3.0.5 or better):
 $ mvn package
 $ java -jar target/*.jar
 ...
-<app starts and listens on port 8080>
+<app starts and listens on port 8090>
 ```
 
 Here are some curl commands to use to get started:
