@@ -1,6 +1,12 @@
+This project is a minimal but functional OAuth2 Resource Server (protected API). It uses
+[Spring Boot](https://github.com/spring-projects/spring-boot) to
+provide an embedded servlet container and for defaulting a load of
+configuration, so you should be up and running with it very
+quickly.
 This project shows what you can do with the minimum configuration to
-set up a Resource Server.
-This resource server is configured to talk to an Authorization server, you can configure the application.yaml file to use a different Auth server if you need.
+set up a Resource Server. This resource server is configured to talk 
+to an Authorization server, you can configure the application.yaml 
+file to use a different Auth server if you need.
 
 ## Building
 
